@@ -8,6 +8,15 @@ import {
 } from "react-google-maps";
 import * as parkData from "./data/dustbins.json";
 import mapStyles from "./mapStyles";
+import About from "./components/About";
+import Blog from "./components/Blog";
+import Experts from "./components/Experts";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Prevent from "./components/Prevent";
+import Login from "./components/Login";
+// import Signup from "./components/Singup";
 
 function Map() {
   const [selectedPark, setSelectedPark] = useState(null);
@@ -72,13 +81,22 @@ const MapWrapped = withScriptjs(withGoogleMap(Map));
 
 export default function App() {
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
-      <MapWrapped
-        googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`}
-        loadingElement={<div style={{ height: `100%` }} />}
-        containerElement={<div style={{ height: `100%` }} />}
-        mapElement={<div style={{ height: `100%` }} />}
-      />
-    </div>
+    <>
+      <Header />
+      <Home />
+      <div style={{ width: "100vw", height: "100vh" }}>
+        <MapWrapped
+          googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`}
+          loadingElement={<div style={{ height: `100%` }} />}
+          containerElement={<div style={{ height: `100%` }} />}
+          mapElement={<div style={{ height: `100%` }} />}
+        />
+      </div>
+      {/* <About /> */}
+      <Prevent />
+      {/* <Experts /> */}
+      <Blog />
+      {/* <Footer /> */}
+    </>
   );
 }
