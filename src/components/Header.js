@@ -20,7 +20,7 @@ export default function Header() {
                 home
               </a>
               <a href="#prevent">Waste Disposal</a>
-              <a href="Login">Login</a>
+              <a href="#login">Login</a>
               <a href="#">Sign Up</a>
             </nav>
           </div>

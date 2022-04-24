@@ -8,12 +8,10 @@ import {
 } from "react-google-maps";
 import * as parkData from "./data/dustbins.json";
 import mapStyles from "./mapStyles";
-import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Prevent from "./components/Prevent";
 import Login from "./components/Login";
-// import Signup from "./components/Singup";
 
 function Map() {
   const [selectedPark, setSelectedPark] = useState(null);
@@ -90,7 +88,7 @@ export default function App() {
         />
       </div>
       <Prevent />
-      {/* <Footer /> */}
+      <Login />
     </>
   );
 }
