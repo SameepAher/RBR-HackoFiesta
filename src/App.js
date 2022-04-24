@@ -8,9 +8,6 @@ import {
 } from "react-google-maps";
 import * as parkData from "./data/dustbins.json";
 import mapStyles from "./mapStyles";
-import About from "./components/About";
-import Blog from "./components/Blog";
-import Experts from "./components/Experts";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/Home";
@@ -84,7 +81,7 @@ export default function App() {
     <>
       <Header />
       <Home />
-      <div style={{ width: "100vw", height: "100vh" }}>
+      <div style={{ width: "100vw", height: "100vh" }} id="map">
         <MapWrapped
           googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}`}
           loadingElement={<div style={{ height: `100%` }} />}
@@ -92,10 +89,7 @@ export default function App() {
           mapElement={<div style={{ height: `100%` }} />}
         />
       </div>
-      {/* <About /> */}
       <Prevent />
-      {/* <Experts /> */}
-      <Blog />
       {/* <Footer /> */}
     </>
   );

@@ -23,7 +23,7 @@ export default function Home() {
               <div className="col-md-6 content text-center text-md-start pl-md-5">
                 <span>Swasth Bharat, Swachh Bharat</span>
                 <h3>Cleaner India, Beautiful India</h3>
-                <a href="#" className="link-btn" target="_blank">
+                <a href="#map" className="link-btn">
                   {/* <Route exact path="/" component={Home} /> */}+ Dustbins
                   Near You
                 </a>
